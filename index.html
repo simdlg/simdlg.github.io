@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H8RCS18K2T"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-H8RCS18K2T');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <ul id="navbar">
+        <li class="nav-spacer"></li>
+        <li id="nav-btn-home" class="nav-btn active"><a href="#home">Home</a></li>
+        <li id="nav-btn-about" class="nav-btn"><a href="#about">About</a></li>
+        <li id="nav-btn-contact" class="nav-btn"><a href="#contact">Contact</a></li>
+        <li class="nav-spacer"></li>
+      </ul>
+    </nav>
+    <a href="#home"><div id="scroll-back-btn" style="display:none;"><i class="fa fa-chevron-up"></i></div></a>
+    <main>
+      <section id="home" class="home">
+        <img src="imgs/banner.jpg"/>
+        <div class="home-card">
+          <p style="font-size:20px;">Welcome</p>
+          <p style="margin-bottom:20px;">I'm <span id="home-name-label" class=accent>Simone Del Grosso</span></p>
+          <p class="section-title" style="padding:10px; border-radius:40px; font-size:20px; font-weight: 700;">Full-stack Developer</p>
+      	</div>
+      </section>
+      <section id="about" class="about">
+        <p class="section-title">About</p>
+      	<div class="about-card">
+          <div class="about-intro">
+            <div class="about-img">
+              <img class="image" src="imgs/photo.jpg" />
+            </div>
+            <div class="about-info">
+              <h1 id="about-name">Simone Del Grosso</h1>
+              <h2 id="about-role" class="accent">Full-stack Developer</h2>
+              <p id="about-text">I'm Simone, a full-stack developer with a great passion for algorithms, artificial intelligence and open-source software.</p>
+              <ul>
+                <li><b>From:</b> Rome, Italy</li>
+                <li><b>Lives:</b> Rome, Italy</li>
+                <li><b>Age:</b> <span id="about-age">27</span></li>
+              </ul>
+            </div>
+          </div>
+          <div id="about-more">
+            <div id="about-education">
+              <h1>Education</h1>
+              <ul>
+                <li>
+                  <p class="about-list-label">2017 - 2023</p>
+                  <p class="about-list-item">Bachelor of Computer Science</p>
+                  <p class="accent about-list-place">Università degli studi di Roma "Tor Vergata"</p>
+                </li>
+                <li>
+                  <p class="about-list-label">2012 - 2017</p>
+                  <p class="about-list-item">Liceo Scientifico</p>
+                  <p class="accent about-list-place">I.I.S. "Edoardo Amaldi"</p>
+                </li>                
+              </ul>
+            </div>
+            <div id="about-experience">
+              <h1>Experience</h1>
+              <ul>
+                <li>
+                  <p class="about-list-label">2023 - Current</p>
+                  <p class="about-list-item">Consultant</p>
+                  <p class="accent about-list-place">Cluster Reply Roma</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="contact" class="contact">
+        <p class="section-title">Contact</p>
+        <div id="contact-card">
+          <h1>Reach out</h1>
+          <ul>
+            <li><a href="https://www.github.com/simdlg"><i class="fab fa-github" style="margin-right: 10px;"></i>GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/simdlg"><i class="fab fa-linkedin" style="margin-right: 10px;"></i>LinkedIn</a></li>
+            <li><a href="https://t.me/simdlg"><i class="fab fa-telegram" style="margin-right: 10px;"></i>Telegram</a></li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-container">
+        <div>
+          <h1>Navigation</h1>
+          <hr/>
+          <ul>
+            <li class="accent"><a href="#home">Home</a></li>
+            <li class="accent"><a href="#about">About</a></li>
+            <li class="accent"><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h1>Contact</h1>
+          <hr/>
+          <ul>
+            <li class="accent"><a href="https://www.github.com/simdlg">GitHub</a></li>
+            <li class="accent"><a href="https://www.linkedin.com/in/simdlg">LinkedIn</a></li>
+            <li class="accent"><a href="https://t.me/simdlg">Telegram</a></li>
+          </ul>
+        </div>
+      </div>
+      <p style="font-size:10px; margin-top:5px;">This template was recreated from scratch.<br/>Original design by <a class="accent" href="https://macodeid.com">MACode ID</a>, all rights reserved to them.</p>
+      <p style="font-size:10px; margin-top:5px;">Copyright &copy; <span id="footer-year">2020</span>. All rights reserved<br/>This template is made with <i class="accent fa fa-heart"></i> by <a class="accent" href="https://macodeid.com">MACode ID</a></p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
