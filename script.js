@@ -1,12 +1,12 @@
 window.onload = () => {
-      
+
   const home = document.getElementById("home");
   const about = document.getElementById("about");
   const contact = document.getElementById("contact");
   const navbar = document.getElementById("navbar");
   const navbarButtons = document.querySelectorAll(".nav-btn");
   const backButton = document.getElementById("scroll-back-btn");
-  
+
   window.addEventListener("scroll", () => {
     if (window.scrollY < (home.offsetTop + home.offsetHeight - 60)) {
       backButton.style.display = "none";
@@ -24,14 +24,19 @@ window.onload = () => {
         button.classList.remove("active");
       });
       navbarButtons[1].classList.add("active");
-  } else if (window.scrollY >= (about.offsetTop + about.offsetHeight - 60) && window.scrollY < (contact.offsetTop + contact.offsetHeight - 60)) {
-  navbarButtons.forEach((button) => {
-        button.classList.remove("active");
+    } else if (window.scrollY >= (about.offsetTop + about.offsetHeight - 60) && window.scrollY < (portfolio.offsetTop + portfolio.offsetHeight - 60)) {
+      navbarButtons.forEach((button) => {
+            button.classList.remove("active");
       });
       navbarButtons[2].classList.add("active");
-  }
+    } else if (window.scrollY >= (portfolio.offsetTop + portfolio.offsetHeight - 60) && window.scrollY < (contact.offsetTop + contact.offsetHeight - 60)) {
+      navbarButtons.forEach((button) => {
+            button.classList.remove("active");
+      });
+      navbarButtons[3].classList.add("active");
+    }
   });
-  
+
   const today = new Date();
   const birthDate = new Date("1998-02-01");
   let age = today.getFullYear() - birthDate.getFullYear();

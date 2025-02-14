@@ -66,16 +66,16 @@ a {
   background-color: #404040;
   border-radius: 50%;
 }
-.home {
+#home {
   position: relative;
 }
-.home > img {
+#home > img {
   width: 100%;
   max-height: 500px;
   pointer-events: none;
   object-fit: cover;
 }
-.home > .home-card {
+#home-card {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -85,8 +85,13 @@ a {
   color: #fff;
   font-size: 32px;
   text-align: center;
+  transition: background-color 0.5s ease-in-out;
 }
-.home > .home-card > p {
+#home-card:hover {
+  background-color: #40404090;
+  transition: background-color 0.5s ease-in-out;
+}
+#home-card > p {
   padding: 10px;
 }
 .section-title {
@@ -99,18 +104,18 @@ a {
   background-color: var(--accent-bg);
   color: var(--accent-fg);
 }
-.about {
+#about {
   max-width: 992px;
   margin: 0px auto;
 }
-.about > .about-card {
+#about-card {
   position: relative;
   display: flex;
   flex-direction: column;
   width: 100%;
   padding: 20px;
 }
-.about > .about-card > .about-intro {
+ #about-intro {
   position: relative;
   display: flex;
   flex-direction: row;
@@ -118,7 +123,10 @@ a {
   padding: 20px;
   margin: 0px auto;
 }
-.about-img {
+#about-img {
+  position: relative;
+  top: -15px;
+  left: 30px;
   box-sizing: content-box;
   width: 200px;
   height: 267px;
@@ -127,10 +135,10 @@ a {
   border: 5px solid var(--accent-fg);
   border-radius: 20px;
 }
-.about-img > .image {
+#about-img > .image {
   position: relative;
-  left: -30px;
   top: 15px;
+  left: -30px;
   width: 100%;
   height: 100%;
   border-radius: 20px;
@@ -139,25 +147,28 @@ a {
   padding: 5px;
   transition: 0.5s padding ease-in-out;
 }
-.about-img > .image:hover {
+#about-img > .image:hover {
   padding: 0px;
   transition: 0.5s padding ease-in-out;
 }
-.about-info {
+#about-info {
   width: 400px;
   padding: 10px;
 }
-.about > .about-card > .about-intro > .about-info > p {
+#about-info > p {
   margin: 20px 0px;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-radius: 20px;
 }
-.about > .about-card > .about-intro > .about-info > ul {
+#about-info > ul {
   position: relative;
   list-style: none;
 }
-.about > .about-card > .about-intro > .about-info > ul > li {
+#about-info > ul > li {
   position: relative;
 }
-.about > .about-card > .about-intro > .about-info > ul > li::before {
+#about-info > ul > li::before {
 content: "";
   display: inline-block;
   z-index: 1;
@@ -168,7 +179,7 @@ content: "";
   border: 2px solid var(--accent-fg);
   background-color: #fff;
 }
-.about > .about-card > .about-intro > .about-info > ul > li::after {
+#about-info > ul > li::after {
   content: "";
   display: inline-block;
   z-index: -1;
@@ -179,13 +190,13 @@ content: "";
   height: 100%;
   border-left: 1px solid #000;
 }
-.about > .about-card > .about-intro > .about-info > ul > :last-child::after {
+#about-info > ul > :last-child::after {
   display: none;
 }
 #about-more {
   display: flex;
   flex-direction: row;
-  flex-wrap: no-wrap;
+  flex-wrap: wrap;
 }
 #about-education {
   flex-grow: 1;
@@ -195,10 +206,22 @@ content: "";
   flex-grow: 1;
   width: 50%;
 }
-#about-more ul {
+#about-certifications {
+  flex-grow: 1;
+  width: 100%;
+}
+#about-skills {
+  flex-grow: 1;
+  width: 100%;
+}
+#about-education ul, 
+#about-experience ul,
+#about-certifications ul {
   list-style: none;
 }
-#about-more ul .about-list-label {
+#about-education ul .about-list-label,
+#about-experience ul .about-list-label,
+#about-certifications ul .about-list-label {
   display: inline-block;
   width: 210px;
   padding: 10px 50px 10px 25px;
@@ -207,10 +230,14 @@ content: "";
   color: #fff;
   border-radius: 25px 0px 50px 25px;
 }
-#about-more ul > :first-child .about-list-label {
+#about-education ul > :first-child .about-list-label,
+#about-experience ul > :first-child .about-list-label,
+#about-certifications ul > :first-child .about-list-label {
   background-color: var(--accent-fg);
 }
-#about-more ul > li::after {
+#about-education ul > li::after,
+#about-experience ul > li::after,
+#about-certifications ul > li::after {
   content: "";
   display: inline-block;
   z-index: -1;
@@ -221,10 +248,14 @@ content: "";
   height: 100%;
   border-left: 1px solid #ccc;
 }
-#about-more ul > :last-child::after {
+#about-education ul > :last-child::after,
+#about-experience ul > :last-child::after,
+#about-certifications ul > :last-child::after {
   display: none;
 }
-#about-more ul > li::before {
+#about-education ul > li::before,
+#about-experience ul > li::before,
+#about-certifications ul > li::before {
   content: "";
   position: relative;
   top: 4px;
@@ -239,23 +270,92 @@ content: "";
   padding: 3px;
   margin-right: 20px;
 }
-#about-more ul > :first-child::before {
+#about-education ul > :first-child::before,
+#about-experience ul > :first-child::before,
+#about-certifications ul > :first-child::before {
   background-color: var(--accent-fg);
   border: 2px solid var(--accent-fg);
   left: 0px;
 }
-#about-more ul > li {
+#about-education ul > li,
+#about-experience ul > li,
+#about-certifications ul > li {
   position: relative;
   margin: 20px;
 }
-#about-more ul .about-list-item {
+#about-education ul .about-list-item,
+#about-experience ul .about-list-item,
+#about-certifications ul .about-list-item {
   margin: 10px 80px 0px;
+  padding: 10px 10px 0px;
+  background-color: #f0f0f0;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
-#about-more ul .about-list-place {
-  margin: 10px 80px 0px;
+#about-education ul .about-list-place,
+#about-experience ul .about-list-place,
+#about-certifications ul .about-list-place {
+  margin: 0px 80px;
+  padding: 10px;
   font-size: 16px;
+  background-color: #f0f0f0;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
-.contact {
+#about-skills ul {
+  list-style: none;
+  margin: 20px;      
+}
+#about-skills ul > li {
+  position: relative;
+}
+#about-skills ul > li::before {
+  content: "";
+  position: relative;
+  top: 7px;
+  display: inline-block;
+  z-index: 1;
+  width: 15px;
+  height: 15px;
+  margin: 5px 20px 5px 5px;
+  background-color: #fff;
+  border: 2px solid var(--accent-fg);
+  border-radius: 50%;
+}
+#about-skills ul > li::after {
+  content: "";
+  display: inline-block;
+  z-index: -100;
+  position: absolute;
+  top: 20px;
+  left: 14px;
+  width: 1px;
+  height: 100%;
+  border-left: 1px solid #000;
+}
+#about-skills ul > :last-child::after {
+  display: none;
+}
+#about-skills-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+#about-skills-container > div {
+  flex-grow: 1;
+  width: 50%;
+}
+#portfolio {
+  max-width: 992px;
+  margin: 0px auto;
+}
+#portfolio-card {
+  flex-direction: row;
+  margin: 0px auto;
+  padding: 20px;
+}
+#contact {
   max-width: 992px;
   margin: 0px auto;
 }
@@ -312,20 +412,20 @@ footer hr {
   border: 1px dashed #fff;
   margin-top: 5px;
 }
-.footer-container {
+#footer-container {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
 }
-.footer-container > div {
+#footer-container > div {
   margin: 20px;
 }
-.footer-container ul {
+#footer-container ul {
   list-style: none;
   margin: 10px auto 20px auto;
 }
-.footer-container ul > li {
+#footer-container ul > li {
   margin: 5px 0px;
 }
 @media screen and (max-width: 550px) {
@@ -336,27 +436,32 @@ footer hr {
     width: 100%;
     text-align: center;
   }
-  .home > .home-card {
+  #home-card {
     width: 75%;
     font-size: 20px;
   }
   #home-name-label {
     display: block;
   }
-}
-@media screen and (max-width: 750px) {
-  .about-intro, #about-more {
+  #about-skills-container {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
   }
-  .about-img {
-    margin: 10px;
-  }
-  .about-info {
+  #about-skills-container > div {
     width: 100%;
   }
-  #about-education, #about-experience {
+}
+@media screen and (max-width: 750px) {
+  #about-intro, #about-more {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  #about-img {
+    margin: 10px;
+  }
+  #about-info, #about-education, #about-experience {
     width: 100%;
   }
 }
