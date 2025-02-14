@@ -169,7 +169,7 @@ a {
   position: relative;
 }
 #about-info > ul > li::before {
-content: "";
+  content: "";
   display: inline-block;
   z-index: 1;
   width: 11px;
@@ -286,7 +286,7 @@ content: "";
 #about-education ul .about-list-item,
 #about-experience ul .about-list-item,
 #about-certifications ul .about-list-item {
-  margin: 10px 80px 0px;
+  margin: 10px 10px 0px 80px;
   padding: 10px 10px 0px;
   background-color: #f0f0f0;
   border-top-left-radius: 20px;
@@ -295,7 +295,7 @@ content: "";
 #about-education ul .about-list-place,
 #about-experience ul .about-list-place,
 #about-certifications ul .about-list-place {
-  margin: 0px 80px;
+  margin: 0px 10px 0px 80px;
   padding: 10px;
   font-size: 16px;
   background-color: #f0f0f0;
