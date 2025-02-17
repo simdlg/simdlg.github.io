@@ -143,6 +143,7 @@ a {
   border-radius: 20px;
   object-fit: cover;
   background-color: #fff;
+  pointer-events: none;
 }
 #about-info {
   width: 400px;
