@@ -1,4 +1,4 @@
-window.onload = async function() {
+window.onload = function() {
 
   const home = document.getElementById("home");
   const about = document.getElementById("about");
@@ -46,27 +46,4 @@ window.onload = async function() {
   }
   document.getElementById("about-age").innerText = age;
   document.getElementById("footer-year").innerText = today.getFullYear();
-
-  const overlay = document.getElementById("overlay");
-  const imgs = document.querySelectorAll("img");
-  const promiseArray = [];
-  const timeout = setTimeout(() => {
-    timeout = null;
-    overlay.style.display = "block";
-  }, 1000);
-
-  for (let img of imgs) {
-    promiseArray.push(new Promise(resolve => {
-      if (img.complete) {
-        resolve();
-      }
-      img.onload = resolve;
-    }));
-  }
-
-  await Promise.all(promiseArray);
-  if (timeout != null) {
-    clearTimeout(timeout);
-  }
-  overlay.style.display = "none";
 };
