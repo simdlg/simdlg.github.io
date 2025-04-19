@@ -13,10 +13,10 @@ window.onload = function() {
 
   function goToHome() {
     window.scroll(0, 0);
-    main.style.position = "fixed";
     setTimeout(() => {
+      main.style.position = "fixed";
       home.style.transform = "translateY(0px)";
-    }, 1000);
+    }, 2000);
   }
 
   function goToAbout() {
