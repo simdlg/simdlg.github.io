@@ -13,6 +13,7 @@ window.onload = function() {
 
   function goToHome() {
     window.scroll(0, 0);
+    main.style.position = "fixed";
     setTimeout(() => {
       home.style.transform = "translateY(0px)";
     }, 1000);
