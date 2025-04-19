@@ -8,15 +8,13 @@ window.onload = function() {
   const backButton = document.getElementById("scroll-back-btn");
 
   navbar.style.position = "fixed";
-  home.style.position = "fixed";
-  main.style.position = "fixed";
 
   function goToHome() {
     window.scroll(0, 0);
     setTimeout(() => {
       main.style.position = "fixed";
       home.style.transform = "translateY(0px)";
-    }, 2000);
+    }, 1500);
   }
 
   function goToAbout() {
